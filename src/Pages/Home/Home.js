@@ -8,6 +8,7 @@ import "./Home.css";
 const Home = ({ name, setName,fetchQuestions }) => {
 //  const Home = ({ name, setName, setEmail, fetchQuestions }) => {
  const [email,setEmail] = useState("email")
+ console.log(email,"email")
   const [category, setCategory] = useState("");
   const [difficulty, setDifficulty] = useState("");
   const [error, setError] = useState(false);
