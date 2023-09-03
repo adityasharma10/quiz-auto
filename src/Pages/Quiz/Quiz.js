@@ -2,6 +2,7 @@ import { CircularProgress } from "@material-ui/core";
 import { useEffect, useState } from "react";
 import Question from "../../components/Question/Question";
 import "./Quiz.css";
+import CountdownTimer from "../../components/CountDownTimer/CountdownTimer";
 
 const Quiz = ({ name, questions, score, setScore, setQuestions }) => {
   const [options, setOptions] = useState();
@@ -27,6 +28,9 @@ const Quiz = ({ name, questions, score, setScore, setQuestions }) => {
     <div className="quiz">
       <span className="subtitle">Welcome, {name}</span>
 
+      <div className="counter">
+<CountdownTimer/>
+    </div>
       {questions ? (
         <>
           <div className="quizInfo">

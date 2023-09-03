@@ -32,7 +32,8 @@ const Question = ({
   };
 
   const handleNext = () => {
-    if (currQues > 8) {
+    console.log(currQues,"currQues")
+    if (currQues > 13) {
       history.push("/result");
     } else if (selected) {
       setCurrQues(currQues + 1);
