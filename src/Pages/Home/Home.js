@@ -7,7 +7,7 @@ import "./Home.css";
 
 const Home = ({ name, setName,fetchQuestions }) => {
 //  const Home = ({ name, setName, setEmail, fetchQuestions }) => {
- 
+ const [email,setEmail] = useState("email")
   const [category, setCategory] = useState("");
   const [difficulty, setDifficulty] = useState("");
   const [error, setError] = useState(false);
@@ -28,7 +28,7 @@ const Home = ({ name, setName,fetchQuestions }) => {
   return (
     <div className="content">
       <div className="settings">
-        <span style={{ fontSize: 30 }}>Quiz Settings</span>
+        <span style={{ fontSize: 30 }}>Quiz Setup</span>
         <div className="settings__select">
           {error && <ErrorMessage>Please Fill all the feilds</ErrorMessage>}
           <TextField
@@ -37,12 +37,12 @@ const Home = ({ name, setName,fetchQuestions }) => {
             variant="outlined"
             onChange={(e) => setName(e.target.value)}
           />
-           {/* <TextField
+           <TextField
             style={{ marginBottom: 25 }}
             label="Enter Your Email"
             variant="outlined" 
             onChange={(e) => setEmail(e.target.value)}
-          /> */}
+          />
           <TextField
             select
             label="Select Category"
